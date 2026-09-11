@@ -28,18 +28,28 @@ const int MAX_SIZE = 5;
 
 //Prototypes
 
-//enterArrayData()
+void enterArrayData(double *infoArray, int size);
 //outputArrayData()
 //sumArray()
 
 int main(){
 
-    //In main, create array of doubles of 5 using a const variable. This array to be used in functions
-
-
+    //Creates array of doubles with size 5
+    double *infoArray = new double[MAX_SIZE];
 
     return 0;
 }
 
 
 //Definitions
+void enterArrayData(double *infoArray, int size){
+
+    cout << "Data entry for the array: " << endl;
+
+    //Loop to input each item in the array
+    for(int i = 0; i < size; i++){
+
+    }
+
+    cout << "Data entry complete." << endl;
+}
