@@ -3,7 +3,6 @@
 //Lab 6 - Dynamic Arrays and Functions 1
 
 #include <iostream>
-
 using namespace std;
 
 //Size for array
@@ -54,8 +53,9 @@ void outputArrayData(double *infoArray, int size){
     for (int i = 0; i < size; i++){
 
         //Same idea for first function
-        cout << *(infoArray + i) << ", ";
+        cout << *(infoArray + i) << "  ";
     }
+    cout << endl;
 }
 
 //Sums it up. No output in this function. Must return sum
