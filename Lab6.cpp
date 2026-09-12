@@ -21,7 +21,7 @@ const int MAX_SIZE = 5;
 //Prototypes
 void enterArrayData(double *infoArray, int size);
 void outputArrayData(double *infoArray, int size);
-//sumArray()
+double sumArray(double *infoArray, int size)
 
 int main(){
 
@@ -32,9 +32,12 @@ int main(){
     enterArrayData(infoArray, MAX_SIZE);
     outputArrayData(infoArray, MAX_SIZE);
 
+    double sum = sumArray(infoArray, MAX_SIZE);
+    //Output for the epic sum of the array
+    cout << "Sum of all values: " << sum << endl;
+
     return 0;
 }
-
 
 //Definitions
 //Entering data
@@ -64,4 +67,19 @@ void outputArrayData(double *infoArray, int size){
         //Same idea for first function
         cout << *(infoArray + i) << ", ";
     }
+}
+
+//Sums it up. No output in this function. Must return sum
+double sumArray(double *infoArray, int size){
+
+    double sum = 0;
+
+    for (int i = 0; i < size; i++){
+
+        //Same concept except it keeps adding up all elements
+        //as it goes down the list
+        sum += *(infoArray + i);
+    }
+
+    return sum;
 }
