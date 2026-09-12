@@ -1,7 +1,4 @@
 /*
-Write a function outputArrayData() that receives a dynamic double array and 
-outputs its contents on one line.
-
 Write a function sumArray() that receives a dynamic double array and both calculates and returns its sum.
 There is no output in this function.
 
@@ -23,7 +20,7 @@ const int MAX_SIZE = 5;
 
 //Prototypes
 void enterArrayData(double *infoArray, int size);
-//outputArrayData()
+void outputArrayData(double *infoArray, int size);
 //sumArray()
 
 int main(){
@@ -33,12 +30,14 @@ int main(){
 
     //Calls functions
     enterArrayData(infoArray, MAX_SIZE);
+    outputArrayData(infoArray, MAX_SIZE);
 
     return 0;
 }
 
 
 //Definitions
+//Entering data
 void enterArrayData(double *infoArray, int size){
 
     cout << "Data entry for the array: " << endl;
@@ -52,4 +51,17 @@ void enterArrayData(double *infoArray, int size){
     }
 
     cout << "Data entry complete." << endl;
+}
+
+//Outputting array
+void outputArrayData(double *infoArray, int size){
+    
+    cout << "Outputting array elements: ";
+
+    //Loops to output each element
+    for (int i = 0; i < size; i++){
+
+        //Same idea for first function
+        cout << *(infoArray + i) << ", ";
+    }
 }
